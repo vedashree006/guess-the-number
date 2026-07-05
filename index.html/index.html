@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Guess the Number 🎯</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="game-box">
+
+    <h1>🎯 Guess the Number</h1>
+
+    <!-- LEVEL SELECT -->
+    <div id="levelBox">
+        <p>Select Level:</p>
+        <button onclick="setLevel(1)">Level 1 (1-50 / 10 attempts)</button>
+        <button onclick="setLevel(2)">Level 2 (1-100 / 7 attempts)</button>
+        <button onclick="setLevel(3)">Level 3 (1-200 / 5 attempts)</button>
+    </div>
+
+    <!-- GAME AREA -->
+    <div id="gameArea" style="display:none;">
+
+        <p id="levelText"></p>
+        <p id="attemptText"></p>
+
+        <input type="number" id="guessInput" placeholder="Enter your guess"/>
+
+        <div class="buttons">
+            <button onclick="checkGuess()">Guess</button>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+
+        <p id="msg"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
